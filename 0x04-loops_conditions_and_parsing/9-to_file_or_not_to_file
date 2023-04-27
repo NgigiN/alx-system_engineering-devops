@@ -2,14 +2,18 @@
 #Gives info on "school file". Use if and else.
 
 file_name="school"
-if [ -e "$file_name" ]; then
+
+if [ -e "$file_name" ]
+then
 	echo "school file exists"
-	if [ -s "$file_name" ]; then
+	if [ -s "$file_name" ]
+	then
 		echo "school file is not empty"
 	else
 		echo "school file is empthy"
 	fi
-	if [ -f "$file_name" ]; then
+	if [ -f "$file_name" ]
+	then
 		echo "school is a regular file"
 	fi
 else

@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 #Script to display contents in list format(part after first dash is displayed
 
-for file in *; do
-	if [[ ! $file =~ ^\..* ]];
-	then
-		echo "${file#*-}"
-	fi
+ls=$(ls)
+
+for file in $ls; do
+	echo "$file" | cut -d '-' -f2
 done
