@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
 #Bash script to stop 4-to_infinity_and_beyond
 
-PID=$(pgrep 4-to_infinity_and_beyond)
-
-kill $PID
+kill $(pgrep "4-to_infinity_and_beyond")
