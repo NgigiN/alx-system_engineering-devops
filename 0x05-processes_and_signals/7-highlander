@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+#Displays to infinity and beyond indefinitely
+# Sleep 2 between each iteration
+# When recievinb SIGTERM signal it displays I am invincible!!!
+sigterm_handler() {
+	echo "I am invincible!!!"
+}
+
+trap sigterm_handler SIGTERM
+
+while :
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
