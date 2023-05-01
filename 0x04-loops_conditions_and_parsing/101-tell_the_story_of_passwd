@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+while IFS=: read -r user pass gid info home shell
+do
+	echo "The user $user is part of the $gid gang, lives in $home and rides $shell. User ID's place is protected by the passcode $pass, more info about the usr here: $info"
+done < /etc/passwd
