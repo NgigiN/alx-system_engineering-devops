@@ -49,8 +49,8 @@ At the end of this project, you are expected to be able to explain to anyone, **
 - Similarly in a job interview, you should answer what the interviewer asked for, be careful about being too verbose - always ask the interviewer if going into details is necessary speaking too much can play against you
 - In this project, again, avoid going in details if not asked
 
-# Attachments
-## [0-simple_web_stack](https://docs.google.com/document/d/11yLzseXQm5XEVmUqxucvFONIls8oG1rGhDKLkZQMSY4/edit?usp=sharing)
-## [1-distributed_web_infrastructure](https://docs.google.com/document/d/1u22PKe04fXBW8wASwXIHGT2IgXUM9jplkW1iISJfzEA/edit?usp=sharing)
-## [2-secured_and_monitored_web_infrastructure](https://docs.google.com/document/d/1jMgEl-RiyVHlNewpPry2D2rp6-20dNDGMsU7rRJe0Bg/edit?usp=sharing)
-## [3-scale_up](https://docs.google.com/document/d/1ibC45bj66mdVfCK2ggEcXyNjUGf57iwW3hTygmwqijg/edit?usp=sharing)
+## Attachments
+### [0-simple_web_stack](https://docs.google.com/document/d/11yLzseXQm5XEVmUqxucvFONIls8oG1rGhDKLkZQMSY4/edit?usp=sharing)
+### [1-distributed_web_infrastructure](https://docs.google.com/document/d/1u22PKe04fXBW8wASwXIHGT2IgXUM9jplkW1iISJfzEA/edit?usp=sharing)
+### [2-secured_and_monitored_web_infrastructure](https://docs.google.com/document/d/1jMgEl-RiyVHlNewpPry2D2rp6-20dNDGMsU7rRJe0Bg/edit?usp=sharing)
+### [3-scale_up](https://docs.google.com/document/d/1ibC45bj66mdVfCK2ggEcXyNjUGf57iwW3hTygmwqijg/edit?usp=sharing)
