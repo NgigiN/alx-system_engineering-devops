@@ -1,7 +1,6 @@
 # 0x09. Web infrastructure design
 
-![Web infrastructure](https://www.youtube.com/watch?time_continue=3&v=lQNEW76KdYg&embeds_referring_euri=https%3A%2F%2Fintranet.alxswe.com%2F)
-
+[![Final video of fixing issues in your code in VS Code](https://img.youtube.com/vi/lQNEW76KdYg/maxresdefault.jpg)](https://www.youtube.com/watch?v=lQNEW76KdYg)
 ## Resources
 ### Read or watch:
 - **Network basics** concept page
@@ -50,3 +49,8 @@ At the end of this project, you are expected to be able to explain to anyone, **
 - Similarly in a job interview, you should answer what the interviewer asked for, be careful about being too verbose - always ask the interviewer if going into details is necessary speaking too much can play against you
 - In this project, again, avoid going in details if not asked
 
+# Attachments
+## [0-simple_web_stack](https://docs.google.com/document/d/11yLzseXQm5XEVmUqxucvFONIls8oG1rGhDKLkZQMSY4/edit?usp=sharing)
+## [1-distributed_web_infrastructure](https://docs.google.com/document/d/1u22PKe04fXBW8wASwXIHGT2IgXUM9jplkW1iISJfzEA/edit?usp=sharing)
+## [2-secured_and_monitored_web_infrastructure](https://docs.google.com/document/d/1jMgEl-RiyVHlNewpPry2D2rp6-20dNDGMsU7rRJe0Bg/edit?usp=sharing)
+## [3-scale_up](https://docs.google.com/document/d/1ibC45bj66mdVfCK2ggEcXyNjUGf57iwW3hTygmwqijg/edit?usp=sharing)
