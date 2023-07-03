@@ -1,0 +1,35 @@
+#!/usr/bin/env bash
+# Installs, configures, and starts Nginx on web-01 and web-02
+# Updates the package list
+
+sudo apt-get -y update
+
+#installs HAproxy
+sudo apt-get -y install haproxy
+
+#configure HAproxy
+sudo tee /etc/haproxy/haproxy.cfg > /dev/null <<EOF
+global
+	daemon
+	maxconn 256
+
+defaults
+	mode http
+	timeout connect 5000ms
+	timeout client 50000ms
+	timeout server 50000ms
+
+frontend http-front
+	balance roundrobin
+	server web-01 100.26.240.218 check
+	server web-02 18.206.208.189 check
+EOT
+
+#test configuration
+sudo haproxy -c -f /etc/haproxy/haproxy.cfg
+
+#start HAproxy
+sudo service haproxy start
+
+#enable HAproxy
+sudo systemctl enable haproxy
