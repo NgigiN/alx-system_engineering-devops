@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Script that displays the IP addresses of subdomains
 
 if [ -z "$1" ]; then
 	echo "Error: domain argument required"
