@@ -1,0 +1,31 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+	echo "Error: domain argument required"
+	exit 1
+fi
+
+domain=$1
+
+subdomain="${2:-}"
+
+subdomains=("www" "lb-01" "web-01" "web-02")
+
+function print_subdomain_info() {
+	local subdomain=$1
+	local record_type=$2
+	local destination=$3
+	echo "The subdomain $subdomain is a $record_type record and points to $destination"
+}
+
+if [ -z "$subdomain" ]; then
+    for subdomain in "${subdomains[@]}"; do
+        record_type=$(nslookup -type=A "${subdomain}.${domain}" | awk '/^Address: / { print "A record" }')
+        destination=$(nslookup -type=A "${subdomain}.${domain}" | awk '/^Address: / { print $2 }')
+        print_subdomain_info "$subdomain" "$record_type" "$destination"
+    done
+else
+    record_type=$(nslookup -type=A "${subdomain}.${domain}" | awk '/^Address: / { print "A record" }')
+    destination=$(nslookup -type=A "${subdomain}.${domain}" | awk '/^Address: / { print $2 }')
+    print_subdomain_info "$subdomain" "$record_type" "$destination"
+fi
