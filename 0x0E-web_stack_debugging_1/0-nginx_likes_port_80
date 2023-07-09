@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# script debugging nginx port 80.
+# Delete the default of sites enabled and replace it witha copy of
+# sites-available default file.
+sudo ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
+sudo service nginx restart
