@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
 # A bash script that accepts one argument
-
-HOME=/ su "$1" -s /bin/bash -c 'whoami' -m
+su "$1" -s /bin/bash -c 'whoami'
