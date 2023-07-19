@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 # A bash script that accepts one argument
 
-su "$1" -s /bin/bash -c 'whoami'
+su "$1" -m -s /bin/bash -c 'whoami'
