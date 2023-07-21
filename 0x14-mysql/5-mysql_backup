@@ -8,7 +8,7 @@ dump_file="backup.sql"
 
 archive_name="${current_date}.tar.gz"
 
-mysqldump -u root -p"$password" --all-databases > $"$dump_file"
+mysqldump -u root -p"$password" --all-databases > "$dump_file"
 
 tar -czvf "$archive_name" "$dump_file"
 
