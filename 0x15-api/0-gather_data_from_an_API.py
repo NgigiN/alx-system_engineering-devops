@@ -14,20 +14,20 @@ def display():
             EMPLOYEE_NAME = (user.get('name'))
             break
 
-    task_number = 0
-    done_tasks = 0
-    task_name = []
+    TOTAL_NUM_OF_TASKS = 0
+    NUMBER_OF_DONE_TASKS = 0
+    TASK_TITLE = []
     to_dos = requests.get("http://jsonplaceholder.typicode.com/todos")
     for to_do in to_dos.json():
         if to_do.get('userId') == int(argv[1]):
-            task_number += 1
+            TOTAL_NUM_OF_TASKS += 1
             if to_do.get('completed') is True:
-                done_tasks += 1
-                task_name.append(to_do.get('title'))
+                NUMBER_OF_DONE_TASKS += 1
+                TASK_TITLE.append(to_do.get('title'))
 
         print("Employee {} is done with tasks({}/{}):".format(EMPLOYEE_NAME,
-              done_tasks, task_number))
-        for task in task_name:
+              NUMBER_OF_DONE_TASKS, TOTAL_NUM_OF_TASKS))
+        for task in TASK_TITLE:
             print("\t {}".format(task))
 
 
