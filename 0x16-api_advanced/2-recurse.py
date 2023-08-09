@@ -10,7 +10,7 @@ import requests
 def recurse(subreddit, hot_list=[], after=""):
     """ Function that queries the Reddit API """
 
-    url = f"https://www.reddit.com/r/{subreddit}/hot.json?"
+    url = f"https://www.reddit.com/r/{subreddit}/hot.json"
     headers = {"User-Agent": "Frocuts"}
 
     response = requests.get(url, headers=headers,
