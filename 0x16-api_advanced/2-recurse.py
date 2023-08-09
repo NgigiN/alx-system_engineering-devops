@@ -5,11 +5,12 @@
 return None. """
 
 import requests
+after = None
 
 
-def recurse(subreddit, hot_list=[], after=""):
+def recurse(subreddit, hot_list=[]):
     """ Function that queries the Reddit API """
-
+    global after
     url = f"https://www.reddit.com/r/{subreddit}/hot.json"
     headers = {"User-Agent": "Frocuts"}
 
@@ -26,7 +27,7 @@ def recurse(subreddit, hot_list=[], after=""):
         if after is None:
             return hot_list
         else:
-            return recurse(subreddit, hot_list, after)
+            return recurse(subreddit, hot_list)
 
     else:
         return None
