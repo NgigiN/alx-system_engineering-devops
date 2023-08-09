@@ -7,21 +7,26 @@ return None. """
 import requests
 
 
-def recurse(subreddit, hot_list=[]):
+def recurse(subreddit, hot_list=[], after=""):
     """ Function that queries the Reddit API """
 
     url = f"https://www.reddit.com/r/{subreddit}/hot.json?"
     headers = {"User-Agent": "Frocuts"}
 
-    response = requests.get(url, headers=headers, allow_redirects=False)
+    response = requests.get(url, headers=headers,
+                            allow_redirects=False, params={'after': after},)
 
     if response.status_code == 200:
-        data = response.json()
-        posts = data['data']['children']
+        for get_data in response.json().get("data").get("children"):
+            data = get_data.get("data")
+            title = data.get("title")
+            hot_list.append(title)
+        after = response.json().get("data").get("after")
 
-        for post in posts:
-            hot_list.append(post['data']['title'])
+        if after is None:
+            return hot_list
+        else:
+            return recurse(subreddit, hot_list, after)
 
-        return hot_list
     else:
         return None
