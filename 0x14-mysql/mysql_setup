@@ -1,0 +1,5 @@
+#!/usr/bin/python3
+# sets up mysql on a server
+
+sudo apt update
+sudo apt upgrade

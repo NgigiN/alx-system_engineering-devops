@@ -1,0 +1,3 @@
+root = admin
+holberton_user = projectcorrection280hbtn
+replica_user = replica
