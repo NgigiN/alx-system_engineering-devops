@@ -4,8 +4,9 @@ first 10 hot posts of a given subreddit. """
 
 import requests
 
+
 def top_ten(subreddit):
-    """ Function that queries for the top 10 titles of a subreddit"""
+    """ Function that queries for the top 10 titles of a subreddit."""
 
     url = 'https://www.reddit.com/r/{}/hot.json?limit=10'.format(subreddit)
 

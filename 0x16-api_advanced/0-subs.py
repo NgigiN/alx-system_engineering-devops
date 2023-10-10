@@ -4,6 +4,7 @@ subscribers. Returns 0 if the function should return 0."""
 
 import requests
 
+
 def number_of_subscribers(subreddit):
     """ function that queries the Reddit API """
 
